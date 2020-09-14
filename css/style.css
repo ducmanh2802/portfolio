@@ -7,6 +7,7 @@ body {
   background-color: #1a1a1a;
   overflow: hidden;
   position: fixed;
+  z-index: 1000;
 }
 #navbar a {
   float: right;
@@ -79,16 +80,84 @@ div.projects {
   margin-left: 35%;
 }
 .project-tile:hover {
-  /* padding: 20px;
-  box-shadow: 0px 0px 20px #1a1a1a; */
+  padding: 20px;
+  box-shadow: 0px 0px 20px #1a1a1a;
 }
 #goals {
   background-color: teal;
   height: 100vh;
 }
 #projects {
-  background-color: thistle;
+  background-color: grey;
   height: 100vh;
+}
+#skills {
+  background-color: slategray;
+  height: 100vh;
+}
+#skills h1,
+#goals h1,
+#projects h1 {
+  position: relative;
+  top: 100px;
+  text-align: right;
+  font-size: 100px;
+  opacity: 0.1;
+  color: white;
+}
+.skills {
+  margin-left: 40%;
+  margin-top: 50px;
+}
+.skills-info {
+  font-size: 14px;
+  color: #bebebe;
+  margin-left: 40%;
+  max-width: 800px;
+  margin-top: 200px;
+}
+div[class^="tag-"] p {
+  color: #fff;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 11px;
+  padding-top: 3px;
+}
+.progressbar {
+  position: relative;
+  width: 600px;
+  height: 20px;
+  border: 2px solid #48bcad;
+  border-radius: 20px;
+  margin-top: 7px;
+}
+div[class^="bar-"] {
+  position: relative;
+  background-color: #fff;
+  height: 10px;
+  border-radius: 20px;
+  margin: 2.7px;
+}
+div[class^="bar-"] span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: #fff;
+}
+div[class^="bar-"]:hover span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 20px;
+  background: #48bcad;
+}
+.bar-html,
+.bar-css,
+.bar-js {
+  width: calc(0 - 6px);
 }
 #experience {
   background-color: sandybrown;
@@ -136,6 +205,7 @@ a {
 .social li:hover a {
   color: red;
 }
+
 @media screen and (max-width: 600px) {
   #navbar {
     position: fixed;

@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: peachpuff;
+  background-color: black;
 }
 #navbar {
   width: 100%;
@@ -87,6 +87,49 @@ div.projects {
   background-color: teal;
   height: 100vh;
 }
+#about {
+  background-color: white;
+  height: 100vh;
+}
+.about-container {
+  display: flex;
+  flex-direction: row;
+  /* position: relative; */
+}
+
+.about-left {
+  width: 20%;
+  height: 100vh;
+  top: -10%;
+  left: 0;
+  background-color: slategray;
+  position: relative;
+}
+
+.about-left_detail {
+  position: absolute;
+  top: 10%;
+  text-align: center;
+}
+ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.data {
+  margin-left: 10px;
+}
+.about-right {
+  width: 80%;
+  height: 100vh;
+  background-color: grey;
+  position: relative;
+}
+
+.about-right_detail h1 {
+  position: absolute;
+  text-align: right;
+}
 #projects {
   background-color: grey;
   height: 100vh;
@@ -97,24 +140,25 @@ div.projects {
 }
 #skills h1,
 #goals h1,
-#projects h1 {
+#projects h1,
+#about h1 {
   position: relative;
   top: 100px;
   text-align: right;
   font-size: 100px;
-  opacity: 0.1;
-  color: white;
+  opacity: 0.2;
+  color: red;
 }
 .skills {
-  margin-left: 40%;
+  margin-left: 30%;
   margin-top: 50px;
 }
 .skills-info {
-  font-size: 14px;
+  font-size: 24px;
   color: #bebebe;
   margin-left: 40%;
-  max-width: 800px;
-  margin-top: 200px;
+  max-width: 1200px;
+  margin: 0px auto;
 }
 div[class^="tag-"] p {
   color: #fff;
@@ -153,6 +197,7 @@ div[class^="bar-"]:hover span {
   height: 100%;
   border-radius: 20px;
   background: #48bcad;
+  animation: move-right 2s infinite;
 }
 .bar-html,
 .bar-css,
@@ -162,6 +207,14 @@ div[class^="bar-"]:hover span {
 #experience {
   background-color: sandybrown;
   height: 100vh;
+}
+p {
+  display: inline-block;
+  font-size: 30px;
+}
+i {
+  color: #fff;
+  font-size: 20px;
 }
 a:hover {
   text-decoration: none;
@@ -209,5 +262,13 @@ a {
 @media screen and (max-width: 600px) {
   #navbar {
     position: fixed;
+  }
+}
+@keyframes move-right {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
   }
 }

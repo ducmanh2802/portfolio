@@ -50,7 +50,7 @@ h2 {
 }
 div.projects {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 10px;
   /* overflow: hidden; */
 }
@@ -102,7 +102,7 @@ div.projects {
   height: 100vh;
   top: -10%;
   left: 0;
-  background-color: slategray;
+  background-color: #4c4c4c;
   position: relative;
 }
 
@@ -119,16 +119,33 @@ ul li {
 .data {
   margin-left: 10px;
 }
+.data p {
+  color: white;
+  font-size: 20px;
+}
+.about-left_detail > p {
+  color: white;
+  font-size: 30px;
+}
 .about-right {
   width: 80%;
   height: 100vh;
-  background-color: grey;
+  background-color: #e5df88;
   position: relative;
 }
-
+.about-right_detail img {
+  height: 900px;
+  margin-left: 15%;
+}
 .about-right_detail h1 {
   position: absolute;
   text-align: right;
+}
+.about-right_detail p {
+  color: white;
+  font-size: 30px;
+  position: relative;
+  top: -50px;
 }
 #projects {
   background-color: grey;
@@ -143,11 +160,11 @@ ul li {
 #projects h1,
 #about h1 {
   position: relative;
-  top: 100px;
+  top: 50px;
   text-align: right;
   font-size: 100px;
-  opacity: 0.2;
-  color: red;
+  opacity: 0.1;
+  color: white;
 }
 .skills {
   margin-left: 30%;
@@ -188,9 +205,9 @@ div[class^="bar-"] span {
   left: 0;
   height: 100%;
   border-radius: 20px;
-  background: #fff;
+  background: #48bcad;
 }
-div[class^="bar-"]:hover span {
+/* div[class^="bar-"]:hover span {
   position: absolute;
   top: 0;
   left: 0;
@@ -198,7 +215,7 @@ div[class^="bar-"]:hover span {
   border-radius: 20px;
   background: #48bcad;
   animation: move-right 2s infinite;
-}
+} */
 .bar-html,
 .bar-css,
 .bar-js {
@@ -211,7 +228,7 @@ div[class^="bar-"]:hover span {
 }
 p {
   display: inline-block;
-  font-size: 30px;
+  font-size: 20px;
 }
 i {
   color: #fff;
@@ -248,7 +265,6 @@ a {
 }
 .social li {
   list-style: none;
-  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,6 +274,120 @@ a {
 }
 .social li:hover a {
   color: red;
+}
+.timeline {
+  position: relative;
+  top: 150px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #ff9f55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 5px 5px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 15px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 10px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
 }
 
 @media screen and (max-width: 600px) {

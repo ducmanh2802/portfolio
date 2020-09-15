@@ -147,6 +147,7 @@ ul li {
   position: relative;
   top: -50px;
 }
+
 #projects {
   background-color: grey;
   height: 100vh;
@@ -358,7 +359,9 @@ a {
   border-radius: 6px;
   text-align: center;
 }
-
+#about h1 {
+  color: #333333;
+}
 @media screen and (max-width: 600px) {
   .timeline::after {
     left: 31px;

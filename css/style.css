@@ -134,7 +134,7 @@ ul li {
   position: relative;
 }
 .about-right_detail img {
-  height: 700px;
+  height: 600px;
   margin-left: 15%;
 }
 .about-right_detail h1 {
@@ -278,7 +278,7 @@ a {
 }
 .timeline {
   position: relative;
-  top: 50px;
+  /* top: 50px; */
   max-width: 1200px;
   margin: 0 auto;
 }
